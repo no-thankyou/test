@@ -20,12 +20,12 @@ class SigninPage(BasePage):
             "Create an account button is not presented"
 
     def register_new_user(self):
-        self.browser.find_element(*RegisterLocators.FIRST_NAME).send_keys(str('name'),
+        self.browser.find_element(*RegisterLocators.FIRST_NAME).send_keys('name'),
         self.browser.find_element(*RegisterLocators.LAST_NAME).send_keys("lastname"),
         self.browser.find_element(*RegisterLocators.PASSWORD).send_keys("123456"),
         self.browser.find_element(*RegisterLocators.ADDRESS).send_keys("address"),
         self.browser.find_element(*RegisterLocators.CITY).send_keys("City"),
         self.browser.find_element(*RegisterLocators.COUNTRY),
         self.browser.find_element(*RegisterLocators.MOBILE_PHONE).send_keys("78346987"),
-        self.browser.find_element(*RegisterLocators.ALIAS)).send_keys('sometheing')
+        self.browser.find_element(*RegisterLocators.ALIAS)).send_keys('sometheing'),
         self.browser.find_element(*RegisterLocators.REGISTER).click()
